@@ -1,0 +1,1 @@
+const fs = require('fs'); const path = require('path'); const file = path.join(process.cwd(), '.data', 'dev-users.json'); try{ fs.writeFileSync(file, '[]', 'utf8'); console.log('cleared', file)}catch(e){ console.error('failed to clear', file, e.message); process.exit(1)}
